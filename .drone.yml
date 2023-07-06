@@ -7,7 +7,6 @@ steps:
     image: alpine/helm
     commands: 
       - helm lint ./webapp
-      - helm package ./webapp/charts/* -d .deploy
 trigger:
   branch:
   - main

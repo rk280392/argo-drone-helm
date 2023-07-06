@@ -1,0 +1,9 @@
+kind: pipeline
+type: docker
+name: add-server-ci
+
+steps:
+  - name: build
+    image: alpine/helm
+    commands: 
+      - helm lint ./webapp

@@ -7,3 +7,5 @@ steps:
     image: alpine/helm
     commands: 
       - helm lint ./webapp
+      - helm install webapp ./webapp --dry-run
+      - helm package charts/* -d .deploy
